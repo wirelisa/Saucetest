@@ -22,7 +22,7 @@ public class sauceTest {
     protected String url;
 
     protected RemoteWebDriver remoteDriver;
-
+/*
     @BeforeMethod
     public void setup(Method method) throws MalformedURLException {
         MutableCapabilities sauceOptions = new MutableCapabilities();
@@ -37,11 +37,11 @@ public class sauceTest {
 
         remoteDriver = new RemoteWebDriver(url, options);
     }
-
+*/
 
     @Test
-    public void runOnCloud(){
-        driver = remoteDriver;
+    public void runOnCloud() throws MalformedURLException {
+        driver = Driver.get();
         driver.get("https://www.saucedemo.com");
         // Inputs standard_user in username field.
         driver.findElement(By.id("user-name")).sendKeys("standard_user");

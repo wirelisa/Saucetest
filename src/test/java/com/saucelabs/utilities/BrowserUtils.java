@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.MalformedURLException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +56,7 @@ public class BrowserUtils {
      * @param locator
      * @return list of strings
      */
-    public static List<String> getElementsText(By locator) {
+    public static List<String> getElementsText(By locator) throws MalformedURLException {
 
         List<WebElement> elems = Driver.get().findElements(locator);
         List<String> elemTexts = new ArrayList<>();
