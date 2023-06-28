@@ -50,6 +50,9 @@
                         <arguments>
                             <argument>-Dsaucelabs.saucerest.url=https://ondemand.saucelabs.com/rest/v1</argument>
                         </arguments>
+                        <sauceConnectOptions>
+                            <distribution>Windows_10</distribution>
+                        </sauceConnectOptions>
                     </configuration>
                     <executions>
                         <execution>
