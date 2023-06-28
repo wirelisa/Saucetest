@@ -28,7 +28,7 @@ jobs:
           sleep 30
 
       - name: Run tests on Sauce Labs
-        run: mvn test -Dsauce.username=$SAUCE_USERNAME -Dsauce.accessKey=$SAUCE_ACCESS_KEY
+        run: mvn test -Dsauce.username=$SAUCE_USERNAME -Dsauce.accessKey=$SAUCE_ACCESS_KEY -Dsauce.distribution=Windows_10/Firefox_Latest
 
       - name: Stop Sauce Connect
         run: killall sc
