@@ -41,7 +41,24 @@
                     <version>2.3</version>
                     <configuration>
                         <sauceConnectVersion>4.6.2</sauceConnectVersion>
+                        <directDomains>
+                            <directDomain>your-app-domain.com</directDomain>
+                        </directDomains>
+                        <sauceUsername>${sauce.username}</sauceUsername>
+                        <sauceAccessKey>${sauce.accessKey}</sauceAccessKey>
+                        <startTunnel>true</startTunnel>
+                        <arguments>
+                            <argument>-Dsaucelabs.saucerest.url=https://ondemand.saucelabs.com/rest/v1</argument>
+                        </arguments>
                     </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>start</goal>
+                                <goal>stop</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
 
             </plugins>
