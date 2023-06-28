@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -50,6 +51,10 @@ public class sauceTest {
 
         // Clicks the Login button
         driver.findElement(By.id("login-button")).click();
+
+        String pageTitle=driver.getTitle();
+        Assert.assertEquals(pageTitle,"Swag Labs");
+
 
         // maximizes browser window
         driver.manage().window().maximize();
